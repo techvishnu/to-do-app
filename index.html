@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo App Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Todo App</h1>
+        <p>Stay organized, boost productivity</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#details">Project Details</a></li>
+            <li><a href="#github">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="screenshots">
+            <h2>App Screenshots</h2>
+            <img src="/assets/proj1.png" alt="Todo App Main Screen" class="screenshot">
+            <img src="/assets/proj2.png" alt="Todo App Add Task Screen" class="screenshot">
+            <img src="/assets/proj3.png" alt="Todo App Completed Tasks Screen" class="screenshot">
+        </section>
+
+        <section id="documentation">
+            <h2>Java Todo Application</h2>
+            <p>Overview</p>
+            <p>The Java Todo Application is a simple command-line tool built using Core Java that allows users to manage their daily tasks effectively. The application provides functionalities to add, update, delete, and list tasks, offering a basic yet powerful interface for task management.</p>
+            <p>This project uses Java Serialization to save tasks to a file so that they can be persisted across sessions. It's structured around three main classes:</p>
+            <ul>
+                <li><strong>Task:</strong> Represents individual tasks.</li>
+                <li><strong>TaskManager:</strong> Manages a list of tasks and handles saving/loading them to/from a file.</li>
+                <li><strong>Main:</strong> The entry point of the application, providing a text-based user interface (CLI) to interact with the application.</li>
+            </ul>
+            <h3>Features</h3>
+            <ul>
+                <li><strong>Add Tasks:</strong> Create a new task by providing a description and category (Personal, Work, Hobby, or Other).</li>
+                <li><strong>Update Tasks:</strong> Modify an existing task's details, including its description, category, and completion status.</li>
+                <li><strong>Delete Tasks:</strong> Remove a task from the list by its unique ID.</li>
+                <li><strong>List Tasks:</strong> Display all tasks along with their ID, description, category, and completion status.</li>
+                <li><strong>Persist Tasks:</strong> Save all tasks to a file (tasks.dat) and reload them when the application starts again.</li>
+            </ul>
+            <h3>How to Use the Application</h3>
+            <ol>
+                <li><strong>Running the Application</strong>
+                    <ul>
+                        <li>Open IntelliJ IDEA (or your preferred IDE) and load the project.</li>
+                        <li>Make sure all required files (Task.java, TaskManager.java, Main.java, and Category.java) are correctly structured in the project.</li>
+                        <li>Click the Run button in IntelliJ to compile and start the application.</li>
+                        <li>You will be presented with a menu in the terminal/console:</li>
+                    </ul>
+                    <pre><code>To-Do List Application
+1. Add Task
+2. Update Task
+3. Delete Task
+4. List Tasks
+5. Exit
+Enter your choice: </code></pre>
+                </li>
+                <li><strong>Adding a Task</strong>
+                    <ul>
+                        <li>Select option 1 to add a new task.</li>
+                        <li>Enter the task description and choose a category from (PERSONAL, WORK, HOBBY, OTHER).</li>
+                        <li>Example:</li>
+                    </ul>
+                    <pre><code>Enter task description: Complete Java Project
+Enter task category (PERSONAL, WORK, HOBBY, OTHER): WORK
+Task added successfully.</code></pre>
+                </li>
+                <li><strong>Updating a Task</strong>
+                    <ul>
+                        <li>Select option 2 to update an existing task by its ID.</li>
+                        <li>You can change the task description, category, and whether it's completed.</li>
+                        <li>Example:</li>
+                    </ul>
+                    <pre><code>Enter task ID: 1
+Enter new description: Finish Todo App
+Enter new category (PERSONAL, WORK, HOBBY, OTHER): WORK
+Is the task completed? (true/false): true
+Task updated successfully.</code></pre>
+                </li>
+                <li><strong>Deleting a Task</strong>
+                    <ul>
+                        <li>Select option 3 to delete a task by its ID.</li>
+                        <li>Example:</li>
+                    </ul>
+                    <pre><code>Enter task ID: 1
+Task deleted successfully.</code></pre>
+                </li>
+                <li><strong>Listing Tasks</strong>
+                    <ul>
+                        <li>Select option 4 to see the list of all tasks.</li>
+                        <li>Example output:</li>
+                    </ul>
+                    <pre><code>Task{id=1, description='Finish Todo App', category=WORK, isCompleted=true}
+Task{id=2, description='Study for exams', category=PERSONAL, isCompleted=false}</code></pre>
+                </li>
+                <li><strong>Exiting the Application</strong>
+                    <ul>
+                        <li>Select 5 to exit the application.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>File Structure</h3>
+            <ul>
+                <li><strong>Task.java:</strong> Defines the task object with attributes like ID, description, category, and completion status.</li>
+                <li><strong>TaskManager.java:</strong> Manages task operations such as adding, updating, deleting, and persisting tasks.</li>
+                <li><strong>Main.java:</strong> The main class that provides a user interface to interact with the application.</li>
+                <li><strong>Category.java:</strong> Enumeration defining the categories for tasks (PERSONAL, WORK, HOBBY, OTHER).</li>
+            </ul>
+            <h3>Data Persistence</h3>
+            <p>Tasks are saved in a file named tasks.dat located in the project directory. The file ensures that tasks are persisted between sessions. When the application starts, it checks for this file and loads existing tasks.</p>
+            <h3>Conclusion</h3>
+            <p>This Todo application is a great way to practice fundamental Java concepts such as file handling, serialization, object-oriented programming, and building command-line interfaces. You can extend this project further by adding more advanced features like task priorities, due dates, or even a graphical user interface (GUI).</p>
+            <p>You can use this as a basis for your documentation section. Feel free to adjust it according to your project’s flow and style!</p>
+        </section>
+
+        <section id="details">
+            <h2>Project Details</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Cross-platform</h3>
+                    <p>Built with React Native for both iOS and Android compatibility.</p>
+                </div>
+                <div class="feature">
+                    <h3>Cloud Sync</h3>
+                    <p>Tasks are synced across devices using Firebase Realtime Database.</p>
+                </div>
+                <div class="feature">
+                    <h3>Offline Support</h3>
+                    <p>Local storage ensures functionality even without an internet connection.</p>
+                </div>
+                <div class="feature">
+                    <h3>Push Notifications</h3>
+                    <p>Reminders for upcoming tasks to keep you on track.</p>
+                </div>
+                <div class="feature">
+                    <h3>Dark Mode</h3>
+                    <p>Easy on the eyes with a built-in dark theme option.</p>
+                </div>
+                <div class="feature">
+                    <h3>Performance</h3>
+                    <p>Optimized for speed and efficiency, even with large task lists.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="github" class="github-section">
+            <h2>GitHub Repository</h2>
+            <p>Explore the source code, contribute, or fork the project on GitHub:</p>
+            <a href="https://github.com/yourusername/todo-app" class="github-button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Todo App. All rights reserved.</p>
+    </footer>
+
+    <button id="scrollToTop" title="Go to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
